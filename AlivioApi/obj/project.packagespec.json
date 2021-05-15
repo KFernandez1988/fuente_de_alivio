@@ -1,0 +1,62 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/kevinfernendez/Desktop/fuente de alivio/website/AlivioApi/AlivioApi.csproj",
+    "projectName": "AlivioApi",
+    "projectPath": "/Users/kevinfernendez/Desktop/fuente de alivio/website/AlivioApi/AlivioApi.csproj",
+    "outputPath": "/Users/kevinfernendez/Desktop/fuente de alivio/website/AlivioApi/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "net50"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp5.0": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp5.0": {
+      "dependencies": {
+        "MongoDB.Driver": {
+          "target": "Package",
+          "version": "[2.11.2, )"
+        },
+        "Swashbuckle.AspNetCore": {
+          "target": "Package",
+          "version": "[5.5.1, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100-rc.1.20452.10/RuntimeIdentifierGraph.json"
+    }
+  }
+}

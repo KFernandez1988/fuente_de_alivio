@@ -1,0 +1,33 @@
+{
+  "name": "fuentedealivio",
+  "version": "1.0.0",
+  "description": " A web/restful application for fuente de alivio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently --raw \"npm run api\" \"npm run web\" ",
+    "web": "cd web; nodemon server.js",
+    "api": "cd api; nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.3.0",
+    "nodemon": "^2.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  },
+  "dependencies": {}
+}

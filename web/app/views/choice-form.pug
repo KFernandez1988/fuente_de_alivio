@@ -1,0 +1,23 @@
+header.header
+  .header__container
+    a.header__brand(href='#home.html') PUERTORICOQuiz
+    .links
+      a.header__link(href='#quiz.html') Dashboard
+      a.header__link(href='#quiz-form.html') Create a New Question
+      a.header__link(href='') Logout
+main.main__container
+  h1.heading Create A New Choice
+  form.form
+    label.form__label
+      span Choice Value
+      input.form__input(type='text' name='name')
+    label.form__label
+      span Choice Type
+      label.form__labelInline(for='')
+        input.form__input__radio(type='radio' checked='' name='type' value='incorrect')
+        span Incorrect
+      label.form__labelInline(for='')
+        input.form__input__radio(type='radio' name='type' value='correct')
+        span Correct
+    button.button.active Create Quiz
+    small.flash Error Message Goes Here

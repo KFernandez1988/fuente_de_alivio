@@ -1,0 +1,71 @@
+block head
+    doctype html
+    head
+    meta(charset='UTF-8')
+    title ASL Quiz App
+    link(rel='stylesheet' href='public/css/styles.css')
+    .container
+    .sidebar
+        a.trigger(href='#0')
+        i
+        nav.sidebar__nav
+        a.sidebar__brand(href='#') JSQuiz
+        a(href='#brand/index.html')
+            | Brand Guide
+            nav
+            a(href='#brand/colors.html')
+                i.fas.fa-palette
+                | colors
+            a(href='#brand/typography.html')
+                i.fas.fa-font
+                | typography
+            a(href='#brand/components.html')
+                i.fas.fa-keyboard
+                | components
+        a
+            | Pages
+            nav
+            a(href='#pages/home.html')
+                i.fas.fa-home
+                | Home Page
+            a(href='#pages/quiz-detail.html')
+                i.fas.fa-list
+                | Quiz Detail
+            a(href='#pages/question-detail.html')
+                i.fas.fa-list
+                | Question Detail
+            a(href='#pages/quiz-form.html')
+                i.fas.fa-file-alt
+                | Create Quiz
+            a(href='#pages/question-form.html')
+                i.fas.fa-file-alt
+                | Create Question
+            a(href='#pages/choice-form.html')
+                i.fas.fa-file-alt
+                | Create Choice
+    main#content 
+
+block foot
+    iframe(src='' frameborder='0')
+     script.
+      /* global fetch document window */
+      const getText = async (link) => {
+      const data = await fetch(link);
+      return data.text();
+      };
+      const renderPage = async (url) => {
+      const page = await getText(url);
+      const content = document.getElementById('content');
+      content.innerHTML = page;
+        };
+      const loadPageFromHash = () => {
+        // load from hash
+      const pageName = decodeURIComponent(window.location.hash.slice(1));
+        if (pageName) {
+        renderPage(pageName);
+        } else {
+        renderPage('brand/index.html');
+        }
+        };
+        window.addEventListener('hashchange', loadPageFromHash);
+        loadPageFromHash();

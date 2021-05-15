@@ -1,0 +1,28 @@
+extends index.pug
+ block head
+    header.header
+    .header__container
+        a.header__brand(href='#home.html') PUERTORICOQuiz
+        .links
+        a.header__link(href='#') Login
+    main.main__container
+    h1.heading Welcome to PUERTORICOQuiz!
+    h2.headingSecondary Want to learn about Puerto Rico before visiting?
+    p
+        | Check out the quizzes created by others below for fun, which will make your knowledge grow
+    h2.headingSecondary Want to test your friend&apos;s knowledge?
+    a.button.primary(href='') Create your own Quiz
+    h1.heading Public Quizzes
+    ul.list
+        li.list__item
+        span.list__item__title General things of Puerto Rico
+        a.link(href='')
+            i.fas.fa-eye
+            span View
+        li.list__item
+        span.list__item__title Places to visit
+        a.link(href='')
+            i.fas.fa-eye
+            span View
+    a.button.primary(href='') Create your own Quiz
+ block foot

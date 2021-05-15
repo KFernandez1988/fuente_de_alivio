@@ -1,0 +1,7 @@
+extends _layout
+block content
+   h1.heading Public Decisions
+   ul.list
+     for decision in decisions
+       li.list__item
+         span.list__item__title= decision.title

@@ -1,0 +1,15 @@
+header.header
+  .header__container
+    a.header__brand(href='#home.html') PUERTORICOQuiz
+    .links
+      a.header__link(href='#quiz.html') Dashboard
+      a.header__link(href='#quiz-form.html') Create a New Question
+      a.header__link(href='') Logout
+main.main__container
+  h1.heading Create A New Question
+  form.form
+    label.form__label
+      span Question Title
+      input.form__input(type='text' name='title')
+    button.button.active Create Quiz
+    small.flash Error Message Goes Here
